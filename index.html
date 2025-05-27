@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Michelle, Namora Comigo?</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+<style>
+  body {
+    background-color: #f2f2f2;
+    text-align: center;
+    margin-top: 100px;
+    font-family: 'Poppins', sans-serif;
+  }
+  h1 {
+    color: #ff4d6d;
+    font-size: 50px;
+    font-family: 'Great Vibes', cursive;
+  }
+  button {
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+  }
+  #sim {
+    background-color: #28a745;
+    color: white;
+  }
+  #sim:hover {
+    background-color: #218838;
+  }
+  #nao {
+    background-color: #dc3545;
+    color: white;
+    position: absolute;
+  }
+</style>
+</head>
+<body>
+
+<h1>Michelle, namora comigo?</h1>
+<button id="sim" onclick="alert('Aeeee! Agora somos namorados, Michelle!')">Sim</button>
+<button id="nao">Não</button>
+
+<script>
+const btnNao = document.getElementById('nao');
+
+btnNao.addEventListener('mouseover', () => {
+  const i = Math.floor(Math.random() * (window.innerWidth - btnNao.offsetWidth));
+  const j = Math.floor(Math.random() * (window.innerHeight - btnNao.offsetHeight));
+  btnNao.style.left = i + 'px';
+  btnNao.style.top = j + 'px';
+});
+</script>
+
+</body>
+</html>
